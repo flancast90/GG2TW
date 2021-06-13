@@ -62,6 +62,7 @@ $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://gr
                             };
                         }
                       document.getElementById('output').style.display = 'block';
+                      document.getElementById('download').style.display = 'block';
                       };
                       
                   });
