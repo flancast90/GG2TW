@@ -55,7 +55,8 @@ $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://gr
                                 }else{
                                   document.getElementById('output').replaceAll('"}]\n','"},\n');
                                   var body = document.querySelector('[aria-label="'+document.getElementsByClassName('KPwZRb')[0].innerHTML.replaceAll(`"`,`\\`)+'"]'); 
-                                  document.getElementById('output').innerHTML += ` {"title":"`+escape(document.getElementsByClassName('KPwZRb')[0].innerHTML)+`", "text":"`+body.innerText+`"}]\n`;
+                                  var res =JSON.parse(`{"title":"`+document.getElementsByClassName('KPwZRb')[0].innerHTML+`", "text":`+body.innerText+`}`);
+                                  document.getElementById('output').innerHTML += res;
                       }
                   });
                             	counter++;
