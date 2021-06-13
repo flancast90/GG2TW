@@ -53,7 +53,7 @@ $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://gr
                                 if (thisPageLinks.includes(escape(document.getElementsByTagName('h1')[0].innerHTML))){
                                 //need code here
                                 }else{
-                                  document.getElementById('output').replaceAll('"}]\n','"}\n');
+                                  document.getElementById('output').replaceAll('"}]\n','"},\n');
                                   var body = document.querySelector('[aria-label="'+document.getElementsByClassName('KPwZRb')[0].innerHTML.replaceAll(`"`,`\\`)+'"]'); 
                                   document.getElementById('output').innerHTML += ` {"title":"`+escape(document.getElementsByClassName('KPwZRb')[0].innerHTML)+`", "text":"`+body.innerText+`"}]\n`;
                       }
