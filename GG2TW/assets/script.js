@@ -65,7 +65,6 @@ $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://gr
                       document.getElementById('download').style.display = 'block';
                       var dataURI = 'data:text/json;charset=UTF-8,';
                       var toURL = encodeURIComponent(document.getElementById('output').value);
-                      alert(dataURI+toURL);
                       document.getElementById('download').href = (dataURI+toURL);
                       };
                       
