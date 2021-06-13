@@ -21,7 +21,7 @@ $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://gr
                                 }else{
                                   document.getElementById('output').value = (document.getElementById('output').value).replaceAll('"}]','"}');
                                   var body = document.querySelector('[aria-label="'+document.getElementsByClassName('KPwZRb')[0].innerHTML.replaceAll(`"`,`\\"`)+'"]'); 
-                                  document.getElementById('output').value += ` {"title":"`+escape(document.getElementsByClassName('KPwZRb')[0].innerHTML)+`", "text":"`+body.innerText.replaceAll('Reply to authorSign in to reply to authorForwardSign in to forwardDeleteYou do not have permission to delete messages in this groupLinkReport message as abuseSign in to report message as abuseShow original messageEither email addresses are anonymous for this group or you need the view member email addresses permission to view the original messageto TiddlyWiki','').replaceAll('"','\\"')+`"}]\n`;
+                                  document.getElementById('output').value += ` {"title":"`+escape(document.getElementsByClassName('KPwZRb')[0].innerHTML)+`", "text":"`+body.innerText.replaceAll('}','\\}').replaceAll('{','\\{').replaceAll('Reply to authorSign in to reply to authorForwardSign in to forwardDeleteYou do not have permission to delete messages in this groupLinkReport message as abuseSign in to report message as abuseShow original messageEither email addresses are anonymous for this group or you need the view member email addresses permission to view the original messageto TiddlyWiki','').replaceAll('"','\\"')+`"}]\n`;
                       }
                   });
                             	counter++;
