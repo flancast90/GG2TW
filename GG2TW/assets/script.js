@@ -28,7 +28,7 @@ $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://gr
                                 }else{
                                   
                                   var body = document.querySelector('[aria-label="'+document.getElementsByClassName('KPwZRb')[0].innerHTML.replaceAll(`"`,`\\"`)+'"]'); 
-                                  var res =JSON.parse(`{"title":"`+document.getElementsByClassName('KPwZRb')[0].innerHTML+`", "text":"`+body.innerText+`"}`);
+                                  var res =JSON.parse(`{"title":"`+document.getElementsByClassName('KPwZRb')[0].innerHTML+`", "text":"`+body.innerText.replaceAll('"','\\"')+`"}`);
                                   thisPageContent.push(JSON.stringify(res));
                                   document.getElementById('output').value = (thisPageContent);
                                   
