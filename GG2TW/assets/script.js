@@ -23,12 +23,12 @@ $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://gr
                                 
                             	$.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent(thisPageLinks[counter]), function (data) {
                                 document.getElementById('container').innerHTML = data.contents;
-                                if (thisPageContent.includes(escape(document.getElementsByClassName('KPwZRb')[0].innerHTML))){
+                                if (thisPageContent.includes(document.getElementsByClassName('KPwZRb')[0].innerHTML)){
                                 //need code here
                                 }else{
                                   
                                   var body = document.querySelector('[aria-label="'+document.getElementsByClassName('KPwZRb')[0].innerHTML.replaceAll(`"`,`\\"`)+'"]'); 
-                                  var res =JSON.parse(`{"title":"`+escape(document.getElementsByClassName('KPwZRb')[0].innerHTML)+`", "text":"`+escape(body.innerText)+`"}`);
+                                  var res =JSON.parse(`{"title":"`+document.getElementsByClassName('KPwZRb')[0].innerHTML+`", "text":"`+body.innerText+`"}`);
                                   thisPageContent.push(JSON.stringify(res));
                                   document.getElementById('output').value = (thisPageContent);
                                   
