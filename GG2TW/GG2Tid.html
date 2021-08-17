@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body style="background: url(assets/img/universe.gif); background-size: cover;">
+<!--we will hide the GET request content here to make it more easily accessible-->
+<p id="output" style="display:none"></p>
+<p id="render" style="display:none;"></p>
+<a download="GG2TW-beta.json" href="" id="downloadJson"></a>
+<textarea id="jsonarray_todatauri" hidden></textarea>
+<center><h1 style="color:#e5e5e5">TW Google Groups To Tiddler JSON</h1>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/flancast90/GG2TW" data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-star" data-show-count="true" aria-label="Star flancast90/GG2TW on GitHub">Star</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/flancast90/GG2TW/fork" data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork flancast90/GG2TW on GitHub">Fork</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/flancast90/GG2TW/issues" data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-issue-opened" data-show-count="true" aria-label="Issue flancast90/GG2TW on GitHub">Issue</a><br><br>
+<br>
+<p id="error-container" style="color:red; font-weight:bold;"></p>
+<br>
+
+<textarea required id="crawl_adder" class="pretty" style="width:100%; height:50vh; background-color:transparent; border:none; color:white; outline:none;" placeholder="Comma separated list of URL's to crawl and convert. (eg: https://example.com/1, https://example.com/2)"></textarea>
+<center><p id="current_task" style="font-weight:bold; color:white; font-size:1.2em;"></p></center>
+<button type="button" onclick="getData();" style="width:100%; cursor:pointer; color:white; font-weight:bold; background-color:#338bbb; border:none; padding:1em;">Export URLs!</button>
+
+
+<br><br><br><br><br>
+<center><footer>Copyright (c) Finn Lancaster 2021</footer></center>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
+
